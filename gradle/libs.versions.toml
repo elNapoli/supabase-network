@@ -1,0 +1,17 @@
+[versions]
+agp = "8.5.1"
+kotlin = "2.0.0"
+koin = "3.5.3"
+
+[libraries]
+apollo-graphql = { module = "io.github.jan-tennert.supabase:apollo-graphql" }
+compose-auth = { module = "io.github.jan-tennert.supabase:compose-auth" }
+gotrue-kt = { module = "io.github.jan-tennert.supabase:gotrue-kt" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+realtime-kt = { module = "io.github.jan-tennert.supabase:realtime-kt" }
+storage-kt = { module = "io.github.jan-tennert.supabase:storage-kt" }
+kmp-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+
+[plugins]
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
