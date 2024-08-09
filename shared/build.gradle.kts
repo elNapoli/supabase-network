@@ -38,11 +38,9 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(project.dependencies.platform("io.github.jan-tennert.supabase:bom:2.5.4"))
-            implementation(libs.gotrue.kt)
-            implementation(libs.realtime.kt)
-            implementation(libs.storage.kt)
-            implementation(libs.compose.auth)
-            implementation(libs.apollo.graphql)
+            api(libs.gotrue.kt)
+            api(libs.realtime.kt)
+            api(libs.storage.kt)
 
             implementation(libs.kmp.koin.core)
 

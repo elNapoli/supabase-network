@@ -2,9 +2,6 @@ package com.baldomero.napoli.supabase.network
 
 import com.baldomero.napoli.supabase.network.config.NetworkConfig
 import io.github.jan.supabase.SupabaseClient
-import io.github.jan.supabase.compose.auth.ComposeAuth
-import io.github.jan.supabase.compose.auth.appleNativeLogin
-import io.github.jan.supabase.compose.auth.googleNativeLogin
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.gotrue.Auth
 import io.github.jan.supabase.postgrest.Postgrest
@@ -34,10 +31,6 @@ class NetworkModule(private val config: NetworkConfig) {
             }
 
             install(Auth) {
-            }
-            install(ComposeAuth) {
-                googleNativeLogin(serverClientId = config.googleClientId)
-                appleNativeLogin()
             }
         }
     }
